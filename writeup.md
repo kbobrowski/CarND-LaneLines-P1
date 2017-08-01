@@ -26,10 +26,19 @@ The goals / steps of this project are the following:
 
 My pipeline consisted of 5 steps. First, I extracted yellow and white colors, then I detected edges using Canny algorithm. In the next step I masked the edges using polygon, followed by detection of lines using Hough algorithm. Finally I extracted left and right lines from a set of detected lines. These steps are visualized using test frame from challenge video:
 
+Test frame:
 ![alt text][test_frame]
+
+Color selection:
 ![alt text][colors]
+
+Extracted edges in the region of interest:
 ![alt text][edges]
+
+Hough lines:
 ![alt text][hough]
+
+Extrapolated Hough lines:
 ![alt text][extrapolated]
 
 In order to extract left and right lines from a set of Hough lines, I modified draw_lines to perform following steps:
