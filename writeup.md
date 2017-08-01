@@ -19,6 +19,7 @@ The goals / steps of this project are the following:
 [extrapolated]: ./writeup_images/extrapolated.PNG "Extrapolated lines"
 [hough2]: ./writeup_images/hough_lines.png "Hough lines2"
 [hough2_groups]: ./writeup_images/hough_lines_groups.png "Clustered Hough lines"
+[stabilized]: ./writeup_images/stabilized.PNG "Stabilization"
 
 ---
 
@@ -62,6 +63,10 @@ Robustness of left and right line selection is visualized in the following examp
 
 ![alt text][hough2]
 ![alt text][hough2_groups]
+
+Finally, line stablilzation is visualized in the following plots (corresponding to challenge video):
+
+![alt text][stabilized]
 
 
 ### 2. Identify potential shortcomings with your current pipeline
