@@ -18,7 +18,7 @@ The goals / steps of this project are the following:
 [hough]: ./writeup_images/hough.PNG "Hough lines"
 [extrapolated]: ./writeup_images/extrapolated.PNG "Extrapolated lines"
 [hough2]: ./writeup_images/hough_lines.png "Hough lines2"
-[hough2_groups]: ./writeup_images/hough_groups.png "Clustered Hough lines"
+[hough2_groups]: ./writeup_images/hough_lines_groups.png "Clustered Hough lines"
 
 ---
 
