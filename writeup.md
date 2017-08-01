@@ -17,6 +17,8 @@ The goals / steps of this project are the following:
 [edges]: ./writeup_images/edges.PNG "Edges"
 [hough]: ./writeup_images/hough.PNG "Hough lines"
 [extrapolated]: ./writeup_images/extrapolated.PNG "Extrapolated lines"
+[hough2]: ./writeup_images/hough_lines.png "Hough lines2"
+[hough2_groups]: ./writeup_images/hough_groups.png "Clustered Hough lines"
 
 ---
 
@@ -56,7 +58,10 @@ In order to extract left and right lines from a set of Hough lines, I modified d
 - optionally for the purpose of the movie: stabilizing slope and shift of the lines by averaging last 20 frames
 - drawing lines with lower bound as a bottom of the frame and upper bound defined ylim variable passed to draw_lines
 
+Robustness of left and right line selection is visualized in the following example (DBSCAN identifies 3 clusters, and weighted centers of two most significant are taken as final left and right lines, one accidental line is discarded):
 
+![alt text][hough2]
+![alt text][hough2_groups]
 
 
 ### 2. Identify potential shortcomings with your current pipeline
