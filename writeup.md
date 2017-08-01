@@ -39,6 +39,10 @@ If you'd like to include images to show how the pipeline works, here is how to i
 
 ![alt text][image1]
 
+<video width="960" height="540" controls>
+  <source src="test_videos_output/solidWhiteRight.mp4">
+</video>
+
 
 ### 2. Identify potential shortcomings with your current pipeline
 
