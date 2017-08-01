@@ -1,9 +1,5 @@
 # **Finding Lane Lines on the Road** 
 
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
-
 ---
 
 **Finding Lane Lines on the Road**
@@ -16,6 +12,11 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/grayscale.jpg "Grayscale"
+[test_frame]: ./writeup_images/test_frame.PNG "Test frame"
+[colors]: ./writeup_images/colors.PNG "Colors selection"
+[edges]: ./writeup_images/edges.PNG "Edges"
+[hough]: ./writeup_images/hough.PNG "Hough lines"
+[extrapolated]: ./writeup_images/extrapolated.PNG "Extrapolated lines"
 
 ---
 
@@ -23,7 +24,13 @@ The goals / steps of this project are the following:
 
 ### 1. Description of the pipeline
 
-My pipeline consisted of 5 steps. First, I extracted yellow and white colors, then I detected edges using Canny algorithm. In the next step I masked the edges using polygon, followed by detection of lines using Hough algorithm. Finally I extracted left and right lines from a set of detected lines.
+My pipeline consisted of 5 steps. First, I extracted yellow and white colors, then I detected edges using Canny algorithm. In the next step I masked the edges using polygon, followed by detection of lines using Hough algorithm. Finally I extracted left and right lines from a set of detected lines. These steps are visualized using test frame from challenge video:
+
+![alt text][test_frame]
+![alt text][colors]
+![alt text][edges]
+![alt text][hough]
+![alt text][extrapolated]
 
 In order to extract left and right lines from a set of Hough lines, I modified draw_lines to perform following steps:
 - calculation of slope (a), shift (b) and length of each line (described as y=ax+b)
@@ -35,13 +42,7 @@ In order to extract left and right lines from a set of Hough lines, I modified d
 - optionally for the purpose of the movie: stabilizing slope and shift of the lines by averaging last 20 frames
 - drawing lines with lower bound as a bottom of the frame and upper bound defined ylim variable passed to draw_lines
 
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
 
-![alt text][image1]
-
-<video width="960" height="540" controls>
-  <source src="test_videos_output/solidWhiteRight.mp4">
-</video>
 
 
 ### 2. Identify potential shortcomings with your current pipeline
