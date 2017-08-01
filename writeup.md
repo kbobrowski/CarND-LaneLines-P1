@@ -27,7 +27,7 @@ The goals / steps of this project are the following:
 
 ### 1. Description of the pipeline
 
-My pipeline consisted of 5 steps. First, I extracted yellow and white colors, then I detected edges using Canny algorithm. In the next step I masked the edges using polygon, followed by detection of lines using Hough algorithm. Finally I extracted left and right lines from a set of detected lines. These steps are visualized using test frame from challenge video:
+My pipeline consisted of 5 steps. First, I extracted yellow and white colors, then I detected edges using Canny algorithm. In the next step I masked the edges using polygon, followed by detection of lines using Hough algorithm. Finally I extracted left and right lines from a set of detected lines. These steps are visualized using test frame from the challenge video:
 
 Test frame:
 
