@@ -71,21 +71,16 @@ Finally, line stablilzation is visualized in the following plots (corresponding 
 
 ### 2. Identify potential shortcomings with your current pipeline
 
-- line vertical
-- situation where lines does not have opposite slopes
-- no tracking of turns
-- 
+Potential shortcoming might include:
 
-One potential shortcoming would be what would happen when ... 
-
-Another shortcoming could be ...
-
+- numerical errors in Hough lines clustering if lines is closely vertical (calculation of slope would include division by zero / very small number)
+- situation where lines does not have opposite slopes is not handled
+- no tracking of turns - lanes are always assumed to be straigh
 
 ### 3. Suggest possible improvements to your pipeline
 
-- allow broader range of shape for the line
-- 
+Possible improvements include:
 
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+- Cluster Hough lines in coordinate system which would avoid division by zero / very small number
+- Allow for slopes of the lines with the same sign (e.g. when the car is joining a new lane), although it would require a special treatment of double lines
+- Make lane model more complex (e.g. described by non-linear equation), to allow accurate lane tracking in turns
