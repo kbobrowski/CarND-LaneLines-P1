@@ -50,21 +50,21 @@ Extrapolated Hough lines:
 ![alt text][extrapolated]
 
 In order to extract left and right lines from a set of Hough lines, I modified draw_lines to perform following steps:
-- calculation of slope (a), shift (b) and length of each line (described as y=ax+b)
+- calculation of slope (a), y-intercept (b) and length of each line (described as y=ax+b)
 - normalizing of a,b space with StandardScaler from sklearn
 - detecting clusters in a,b space (lines closely co-linear) using DBSCAN method with lines lengths as weights
 - calculation of the centers of the clusters using weighted average with line lenghts as weights
 - selection of two largest clusters for which the slopes have opposite signs and absolute value in a range (0.2, 1.5)
 - transforming a,b of selected two clusters back to original scale
-- optionally for the purpose of the movie: stabilizing slope and shift of the lines by averaging last 20 frames
-- drawing lines with lower bound as a bottom of the frame and upper bound defined ylim variable passed to draw_lines
+- optionally for the purpose of the movie: stabilizing slope and y-intercept of the lines by averaging last 20 frames
+- drawing lines with lower bound as a bottom of the frame and upper bound defined by ylim variable passed to draw_lines
 
 Robustness of left and right line selection is visualized in the following example (DBSCAN identifies 3 clusters, and weighted centers of two most significant are taken as final left and right lines, one accidental line is discarded):
 
 ![alt text][hough2]
 ![alt text][hough2_groups]
 
-Finally, line stablilzation is visualized in the following plots (corresponding to challenge video):
+Finally, line stablilzation is visualized in the following plots (corresponding to the challenge video):
 
 ![alt text][stabilized]
 
